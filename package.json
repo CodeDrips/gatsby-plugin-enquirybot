@@ -1,0 +1,41 @@
+{
+  "name": "gatsby-plugin-enquirybot",
+  "description": "Gatsby plugin that adds enquirybot JS file to site",
+  "version": "1.0.1",
+  "author": "Tom Macready-Bryan <tom@codedrips.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeDrips/gatsby-plugin-enquirybot.git"
+  },
+  "homepage": "https://github.com/CodeDrips/gatsby-plugin-enquirybot.git",
+  "bugs": {
+    "url": "https://github.com/CodeDrips/gatsby-plugin-enquirybot/issues"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "enquirybot",
+    "enquirybot.js"
+  ],
+  "scripts": {
+    "build": "babel src --out-dir .",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "gatsby": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "prettier": "^2.4.1"
+  },
+  "engines": {
+    "node": ">=6.0"
+  },
+  "dependencies": {}
+}

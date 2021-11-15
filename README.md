@@ -28,9 +28,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-enquirybot`,
       options: {
-        botId: "YOUR_TIDIO_ID",
-        // get this from the tidio script widget
-        development: true,
+        botId: "YOUR_BOT_ID",
+        development: true
       },
     },
   ],

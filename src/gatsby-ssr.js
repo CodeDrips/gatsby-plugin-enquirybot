@@ -1,6 +1,4 @@
-"use strict";
-
-const React = require('react');
+const React = require('react')
 
 exports.onRenderBody = ({
   setPostBodyComponents
@@ -22,7 +20,7 @@ exports.onRenderBody = ({
 
   return setPostBodyComponents([
     <script
-      key="gatsby-plugin-enquirybot",
+      key="gatsby-plugin-enquirybot"
       src={source}
       dataBotId={botId}
     />,

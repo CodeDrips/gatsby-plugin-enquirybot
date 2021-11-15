@@ -3,12 +3,12 @@
 const React = require('react');
 
 exports.onRenderBody = ({
-  setHeadComponents
+  setPostBodyComponents
 }, {
   botId,
   development = true
 }) => {
-  let source = "//launcher.enquirybot.com/index.js";
+  let source = "https://launcher.enquirybot.com/index.js";
 
   if (!development && process.env.NODE_ENV === 'development') {
     console.log('"development" is set to false - gatsby-plugin-enquirybot will not load in development mode');
@@ -20,9 +20,11 @@ exports.onRenderBody = ({
     return null;
   }
 
-  return setHeadComponents([/*#__PURE__*/React.createElement("script", {
-    key: "gatsby-plugin-enquirybot",
-    src: source,
-    'data-bot-id': botId
-  })]);
+  return setPostBodyComponents([
+    <script
+      key="gatsby-plugin-enquirybot",
+      src={source}
+      dataBotId={botId}
+    />,
+  ])
 };
